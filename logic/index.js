@@ -64,5 +64,42 @@ const rockHandler = () => {
   }
 };
 
+const paperHandler = () => {
+  let computerChoice = Math.trunc(Math.random() * 3);
+  userChoice = 1;
+
+  firstImage.src = images[userChoice];
+  secondImage.src = images[computerChoice];
+
+  if (computerChoice != userChoice) {
+    if (userChoice > 0 && computerChoice != 2) {
+      wining();
+    } else {
+      loosing();
+    }
+  } else {
+    draw();
+  }
+};
+
+const scissorsHandler = () => {
+  let computerChoice = Math.trunc(Math.random() * 3);
+  userChoice = 2;
+
+  firstImage.src = images[userChoice];
+  secondImage.src = images[computerChoice];
+
+  if (computerChoice != userChoice) {
+    if (userChoice && computerChoice != 0) {
+      wining();
+    } else {
+      loosing();
+    }
+  } else {
+    draw();
+  }
+};
+
 rockBtn.addEventListener("click", rockHandler);
-paperBtn.addEventListener("click");
+paperBtn.addEventListener("click", paperHandler);
+scissorsBtn.addEventListener("click", scissorsHandler);
