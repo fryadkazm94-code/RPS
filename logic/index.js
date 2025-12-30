@@ -11,11 +11,7 @@ const scissorsBtn = document.querySelector(".scissors");
 const firstImage = document.querySelector(".first-image");
 const secondImage = document.querySelector(".second-image");
 
-const images = [
-  "/images/rock.webp",
-  "/images/paper.webp",
-  "/images/scissor.webp",
-];
+const images = ["images/rock.webp", "images/paper.webp", "images/scissor.webp"];
 
 const wining = () => {
   result.style.color = "#D1FFD1";
