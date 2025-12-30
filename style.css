@@ -301,7 +301,7 @@ footer,
 @media (max-width: 26.9em) {
   .grid {
     display: flex;
-    margin-top: 2.8rem;
+    margin-top: 2rem;
     align-items: center;
     padding-top: 0.8rem;
     margin-bottom: 1.8rem;
@@ -310,7 +310,7 @@ footer,
 
   .buttons {
     padding: 0;
-    margin-top: 2.2rem;
+    margin-top: 1rem;
     align-items: center;
     flex-direction: column;
   }
@@ -322,16 +322,18 @@ footer,
   }
 
   .second-col {
-    margin-top: 2.4rem;
+    margin-top: 1.6rem;
   }
 
   .first-col,
   .second-col {
-    gap: 2.4rem;
+    gap: 1.6rem;
   }
 
   .image-container {
-    width: 75%;
+    width: 70%;
+    box-shadow: none;
+    border-radius: 0;
   }
 
   .reset {
