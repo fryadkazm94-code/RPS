@@ -82,6 +82,12 @@ body,
   border-bottom: 1px solid var(--title-border);
 }
 
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 h1 {
   font-weight: 540;
   font-size: 3.4rem;
@@ -171,7 +177,6 @@ body,
 .scissors {
   width: 20%;
   border: none;
-  cursor: pointer;
   cursor: pointer;
   font-weight: 600;
   font-size: 1.5rem;
