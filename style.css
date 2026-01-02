@@ -214,6 +214,12 @@ body,
     letter-spacing: 1.5px;
     filter: brightness(1.25);
   }
+
+  :where(.reset):hover {
+    color: #000000 !important;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color) !important;
+  }
 }
 
 :where(.button):active {
@@ -240,8 +246,10 @@ body,
   margin-top: 0.8rem;
   grid-column: span 2;
   transition: all 0.35s;
+  color: var(--main-color);
+  background-color: transparent;
+  border: 2px solid var(--main-color);
   animation: moveInBottom 1.05s ease-in-out;
-  background: linear-gradient(225deg, #e6e6e6, #ffffff);
 }
 
 :where(.reset):active {
