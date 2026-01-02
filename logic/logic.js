@@ -7,7 +7,6 @@ const resetBtn = document.querySelector(".reset");
 const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
-
 const firstImage = document.querySelector(".first-image");
 const secondImage = document.querySelector(".second-image");
 
