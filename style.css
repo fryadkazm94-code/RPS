@@ -1,11 +1,9 @@
 /* ---08 white-space  */
 /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
-/* 
-
-----02 Font size system:
+/* ----02 Font size system:
  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 
-/*  */
+/* */
 
 * {
   margin: 0;
@@ -29,15 +27,15 @@ html {
 }
 
 :root {
-  --main-color: #ffffff;
-  --title-border: #1a4055;
-  --main-background: #002b42;
-  --header-gradient-end: #48cae4;
-  --selection-text-color: #f8f9fa;
-  --header-gradient-start: #0096c7;
-  --button-gradient-start: #064374;
-  --image-container-shadow: #00314b;
-  --selection-background-color: #219ebc;
+  --main-color: #2d3436;
+  --title-border: #95a5a6;
+  --main-background: #b9c4d1;
+  --header-gradient-end: #e17055;
+  --selection-text-color: #dfe6e9;
+  --header-gradient-start: #0984e3;
+  --button-gradient-start: #6c5ce7;
+  --image-container-shadow: #94a3b8;
+  --selection-background-color: #6c5ce7;
 }
 
 body {
@@ -110,8 +108,8 @@ h1 + p {
   border-radius: 3px;
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  color: var(--main-color);
-  background-color: #1b3e53;
+  color: #dfe6e9;
+  background-color: #636e72;
 }
 
 .grid {
@@ -150,7 +148,7 @@ img {
   width: 4.6rem;
   display: none;
   height: 4.6rem;
-  color: #ffffff;
+  color: #2d3436;
   stroke-width: 2px;
   border-radius: 50%;
   pointer-events: none;
@@ -204,25 +202,25 @@ body,
   border-radius: 5px;
   grid-column: span 2;
   transition: all 0.35s;
-  color: var(--main-color);
+  color: #dfe6e9;
   animation: moveInBottom 1.05s ease-in-out;
-  background: linear-gradient(145deg, #064374, #2a86d2);
+  background: linear-gradient(145deg, #0984e3, #74b9ff);
 }
 
 @media (hover: hover) {
   :where(.button):hover {
     letter-spacing: 1.5px;
-    filter: brightness(1.25);
+    filter: brightness(1.1);
   }
 
   :where(.reset):hover {
-    color: #000000 !important;
+    color: #dfe6e9 !important;
     background-color: var(--main-color) !important;
   }
 }
 
 :where(.button):active {
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 
 .buttons {
@@ -245,10 +243,10 @@ body,
   margin-top: 0.8rem;
   grid-column: span 2;
   transition: all 0.35s;
-  color: #2a86d2;
+  color: var(--main-color);
   background-color: transparent;
-  box-shadow: inset 0 0 0 2px #2a86d2;
   animation: moveInBottom 1.05s ease-in-out;
+  box-shadow: inset 0 0 0 2px var(--main-color);
 }
 
 :where(.reset):active {
@@ -387,8 +385,8 @@ footer,
   }
 }
 
-/*  */
-/*  */
+/* */
+/* */
 /* animations */
 
 @keyframes moveInLeft {

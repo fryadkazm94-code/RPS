@@ -31,22 +31,22 @@ const alternatives = {
 
 const winning = () => {
   result.textContent = "You won!";
-  result.style.color = "#D1FFD1";
+  result.style.color = "#009432";
 };
 
 const losing = () => {
   result.textContent = "You lost!";
-  result.style.color = "#FF8F8F";
+  result.style.color = "#c23616";
 };
 
 const draw = () => {
-  result.style.color = "#ffffff";
+  result.style.color = "#2d3436";
   result.textContent = "It's a draw";
 };
 
 const reset = () => {
   result.textContent = "?";
-  result.style.color = "#ffffff";
+  result.style.color = "#dfe6e9";
   firstImage.alt = alternatives["3"];
   secondImage.alt = alternatives["3"];
   firstImage.src = "images/initial.webp";
