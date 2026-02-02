@@ -31,22 +31,25 @@ const alternatives = {
 
 const winning = () => {
   result.textContent = "You won!";
-  result.style.color = "#009432";
+  // Perfect Pastel Green: High contrast against the dark grey box
+  result.style.color = "#7bed9f";
 };
 
 const losing = () => {
   result.textContent = "You lost!";
-  result.style.color = "#c23616";
+  // Perfect Pastel Red/Salmon: Readable and soft, but clear
+  result.style.color = "#ff6b6b";
 };
 
 const draw = () => {
-  result.style.color = "#2d3436";
+  // Pure White: To match the neutral 'draw' state perfectly
+  result.style.color = "#ffffff";
   result.textContent = "It's a draw";
 };
 
 const reset = () => {
   result.textContent = "?";
-  result.style.color = "#dfe6e9";
+  result.style.color = "#ffffff";
   firstImage.alt = alternatives["3"];
   secondImage.alt = alternatives["3"];
   firstImage.src = "images/initial.webp";

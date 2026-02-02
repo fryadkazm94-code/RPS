@@ -102,14 +102,15 @@ h1 {
   -webkit-background-clip: text;
 }
 
+/* This is the Result Template Box */
 h1 + p {
   font-size: 2rem;
   min-width: 10rem;
   border-radius: 3px;
   display: inline-block;
   padding: 0.8rem 1.6rem;
-  color: #dfe6e9;
-  background-color: #636e72;
+  color: #f1f2f6; /* Default white-grey text */
+  background-color: #535c68; /* Deep Blue-Grey background for better contrast */
 }
 
 .grid {
