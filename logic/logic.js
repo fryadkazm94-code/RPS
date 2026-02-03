@@ -1,19 +1,103 @@
 "use strict";
 
 // document.querySelector(".copyright").textContent = new Date().getFullYear();
+const sun = document.querySelector(".sun");
+const moon = document.querySelector(".moon");
+const title = document.querySelector(".title");
+const gameName = document.querySelector(".game-name");
 
+const rockBtn = document.querySelector(".rock");
 const result = document.querySelector(".result");
 const resetBtn = document.querySelector(".reset");
-const rockBtn = document.querySelector(".rock");
 const paperBtn = document.querySelector(".paper");
 const scissorsBtn = document.querySelector(".scissors");
 const firstImage = document.querySelector(".first-image");
+const darkModeButton = document.querySelector(".dark-mode");
 const secondImage = document.querySelector(".second-image");
-
+const darkModeButtonContent = document.querySelector(".dark-light-content");
 // alternative text for rock: Rock
 // alternative text for paper: paper
 // alternative text for scissors: scissors
 // alternative text for initial state: No choice selected yet
+
+// taolored to the dark mode effect
+darkModeButton.addEventListener("click", toLight);
+
+function toLight() {
+  if (sun.classList.contains("invisible")) {
+    dark();
+  } else {
+    sun.classList.add("invisible");
+    sun.style.stroke = "#e2e8f0";
+    moon.classList.remove("invisible");
+    darkModeButton.style.color = "#f1f5f9";
+    darkModeButtonContent.textContent = "Dark Mode";
+    darkModeButton.style.backgroundColor = "#1e293b";
+
+    document.querySelector(".scissor").style.fill = "#2d3436";
+    document.querySelector(".game-name").style.color = "#2d3436";
+    document.querySelector("body").style.backgroundColor = "#b9c4d1";
+
+    document.querySelectorAll(".players").forEach((element) => {
+      element.style.color = "#2d3436";
+    });
+
+    document.querySelectorAll(".image-container").forEach((element) => {
+      element.style.boxShadow = "2px 2px 0 1.6rem #94a3b8";
+    });
+
+    // Buttons -> Restore Blue Gradient
+    document.querySelectorAll(".button").forEach((btn) => {
+      btn.style.background = "linear-gradient(145deg, #0984e3, #74b9ff)";
+      btn.style.color = "#dfe6e9";
+    });
+
+    resetBtn.style.color = "#2d3436";
+    resetBtn.style.boxShadow = "inset 0 0 0 2px #2d3436";
+
+    document.querySelector(".main-header").style.backgroundImage =
+      "linear-gradient(to right, #0984e3, #e17055)";
+
+    result.style.backgroundColor = "#535c68";
+    result.style.color = "#f1f2f6";
+  }
+}
+//
+
+function dark() {
+  sun.style.stroke = "#92400e";
+  moon.classList.add("invisible");
+  sun.classList.remove("invisible");
+  darkModeButton.style.color = "#78350f";
+  darkModeButtonContent.textContent = "Light Mode";
+  darkModeButton.style.backgroundColor = "#fde68a";
+
+  document.querySelector(".scissor").style.fill = "#e0e0e0";
+  document.querySelector(".game-name").style.color = "#e0e0e0";
+  document.querySelector("body").style.backgroundColor = "#121212";
+
+  document.querySelectorAll(".players").forEach((element) => {
+    element.style.color = "#e0e0e0";
+  });
+
+  document.querySelectorAll(".image-container").forEach((element) => {
+    element.style.boxShadow = "none";
+  });
+
+  document.querySelectorAll(".button").forEach((btn) => {
+    btn.style.background = "#334155";
+    btn.style.color = "#f1f5f9";
+  });
+
+  resetBtn.style.color = "#e0e0e0";
+  resetBtn.style.boxShadow = "inset 0 0 0 2px #e0e0e0";
+
+  document.querySelector(".main-header").style.backgroundImage =
+    "linear-gradient(to right, #8e9eab, #eef2f3)";
+
+  result.style.backgroundColor = "#334155";
+  result.style.color = "#f1f5f9";
+}
 
 const images = [
   "images/rock.webp",

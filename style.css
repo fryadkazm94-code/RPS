@@ -78,7 +78,45 @@ body,
   gap: 0.6rem;
   padding: 0.8rem;
   align-items: center;
-  border-bottom: 1px solid var(--title-border);
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-mode {
+  gap: 0.6rem;
+  border: none;
+  display: flex;
+  margin: 0.8rem;
+  cursor: pointer;
+  color: #f1f5f9;
+  font-weight: 6000;
+  font-size: 1.8rem;
+  border-radius: 9px;
+  padding: 1rem 2rem;
+  align-items: center;
+  transition: all 0.3s;
+  background-color: #1e293b;
+  font-family: "Fredoka", sans-serif;
+}
+
+.dark-mode:hover {
+  background-color: #334155;
+}
+
+.moon,
+.sun {
+  width: 2rem;
+  height: 2rem;
+  stroke: #e2e8f0;
+}
+
+.invisible {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
 }
 
 fieldset {
@@ -92,7 +130,7 @@ h1 {
   font-size: 3.4rem;
   color: transparent;
   letter-spacing: 0.5px;
-  margin: 2.4rem 0 1.6rem 0;
+  margin: 2rem 0 1.6rem 0;
   background: linear-gradient(
     to right,
     var(--header-gradient-start),
@@ -429,6 +467,7 @@ footer,
 @keyframes moveInTop {
   0% {
     opacity: 0;
+    transform: 1;
   }
 
   100% {
