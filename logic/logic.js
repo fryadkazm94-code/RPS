@@ -14,6 +14,7 @@ const firstImage = document.querySelector(".first-image");
 const darkModeButton = document.querySelector(".dark-mode");
 const secondImage = document.querySelector(".second-image");
 const darkModeButtonContent = document.querySelector(".dark-light-content");
+
 // alternative text for rock: Rock
 // alternative text for paper: paper
 // alternative text for scissors: scissors
