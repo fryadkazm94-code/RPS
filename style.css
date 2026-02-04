@@ -102,10 +102,9 @@ body,
   font-family: "Fredoka", sans-serif;
 }
 
-.dark-mode:hover {
-  background-color: #334155;
+.dark-mode:active {
+  transform: translateY(5px);
 }
-
 .moon,
 .sun {
   width: 2rem;
@@ -179,7 +178,6 @@ img {
   border-radius: 2px;
   align-items: center;
   justify-content: center;
-  box-shadow: 2px 2px 0 1.6rem var(--image-container-shadow);
 }
 
 .to-top-icon {
@@ -366,6 +364,17 @@ footer,
     padding-top: 0.8rem;
     margin-bottom: 1.8rem;
     flex-direction: column;
+  }
+
+  .dark-mode {
+    padding: 0.8rem 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  .sun,
+  .moon {
+    height: 2rem;
+    width: 2rem;
   }
 
   .buttons {

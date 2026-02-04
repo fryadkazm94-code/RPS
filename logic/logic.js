@@ -4,7 +4,6 @@
 const sun = document.querySelector(".sun");
 const moon = document.querySelector(".moon");
 const title = document.querySelector(".title");
-const gameName = document.querySelector(".game-name");
 
 const rockBtn = document.querySelector(".rock");
 const result = document.querySelector(".result");
@@ -20,49 +19,46 @@ const darkModeButtonContent = document.querySelector(".dark-light-content");
 // alternative text for scissors: scissors
 // alternative text for initial state: No choice selected yet
 
-// taolored to the dark mode effect
-darkModeButton.addEventListener("click", toLight);
+// tailored to the dark mode effect
+darkModeButton.addEventListener("click", toDark);
 
-function toLight() {
+function toDark() {
   if (sun.classList.contains("invisible")) {
     dark();
   } else {
-    sun.classList.add("invisible");
-    sun.style.stroke = "#e2e8f0";
-    moon.classList.remove("invisible");
-    darkModeButton.style.color = "#f1f5f9";
-    darkModeButtonContent.textContent = "Dark Mode";
-    darkModeButton.style.backgroundColor = "#1e293b";
-
-    document.querySelector(".scissor").style.fill = "#2d3436";
-    document.querySelector(".game-name").style.color = "#2d3436";
-    document.querySelector("body").style.backgroundColor = "#b9c4d1";
-
-    document.querySelectorAll(".players").forEach((element) => {
-      element.style.color = "#2d3436";
-    });
-
-    document.querySelectorAll(".image-container").forEach((element) => {
-      element.style.boxShadow = "2px 2px 0 1.6rem #94a3b8";
-    });
-
-    // Buttons -> Restore Blue Gradient
-    document.querySelectorAll(".button").forEach((btn) => {
-      btn.style.background = "linear-gradient(145deg, #0984e3, #74b9ff)";
-      btn.style.color = "#dfe6e9";
-    });
-
-    resetBtn.style.color = "#2d3436";
-    resetBtn.style.boxShadow = "inset 0 0 0 2px #2d3436";
-
-    document.querySelector(".main-header").style.backgroundImage =
-      "linear-gradient(to right, #0984e3, #e17055)";
-
-    result.style.backgroundColor = "#535c68";
-    result.style.color = "#f1f2f6";
+    light();
   }
 }
 //
+
+const images = [
+  "images/rock.webp",
+  "images/paper.webp",
+  "images/scissor.webp",
+  "images/initial.webp",
+];
+
+const alternatives = {
+  0: "Rock",
+  1: "Paper",
+  2: "Scissors",
+  3: "No choice selected yet",
+};
+
+const winning = () => {
+  result.textContent = "You won!";
+  result.style.color = "#7bed9f";
+};
+
+const losing = () => {
+  result.textContent = "You lost!";
+  result.style.color = "#ff6b6b";
+};
+
+const draw = () => {
+  result.style.color = "#ffffff";
+  result.textContent = "It's a draw";
+};
 
 function dark() {
   sun.style.stroke = "#92400e";
@@ -97,39 +93,41 @@ function dark() {
 
   result.style.backgroundColor = "#334155";
   result.style.color = "#f1f5f9";
+  document.querySelectorAll(".to-top-icon").forEach((element) => {
+    element.style.color = "#e0e0e0";
+  });
 }
 
-const images = [
-  "images/rock.webp",
-  "images/paper.webp",
-  "images/scissor.webp",
-  "images/initial.webp",
-];
+function light() {
+  sun.classList.add("invisible");
+  sun.style.stroke = "#e2e8f0";
+  moon.classList.remove("invisible");
+  darkModeButton.style.color = "#f1f5f9";
+  darkModeButtonContent.textContent = "Dark Mode";
+  darkModeButton.style.backgroundColor = "#1e293b";
 
-const alternatives = {
-  0: "Rock",
-  1: "Paper",
-  2: "Scissors",
-  3: "No choice selected yet",
-};
+  document.querySelector(".scissor").style.fill = "#2d3436";
+  document.querySelector(".game-name").style.color = "#2d3436";
+  document.querySelector("body").style.backgroundColor = "#b9c4d1";
 
-const winning = () => {
-  result.textContent = "You won!";
-  // Perfect Pastel Green: High contrast against the dark grey box
-  result.style.color = "#7bed9f";
-};
+  document.querySelectorAll(".players").forEach((element) => {
+    element.style.color = "#2d3436";
+  });
 
-const losing = () => {
-  result.textContent = "You lost!";
-  // Perfect Pastel Red/Salmon: Readable and soft, but clear
-  result.style.color = "#ff6b6b";
-};
+  document.querySelectorAll(".button").forEach((btn) => {
+    btn.style.background = "linear-gradient(145deg, #0984e3, #74b9ff)";
+    btn.style.color = "#dfe6e9";
+  });
 
-const draw = () => {
-  // Pure White: To match the neutral 'draw' state perfectly
-  result.style.color = "#ffffff";
-  result.textContent = "It's a draw";
-};
+  resetBtn.style.color = "#2d3436";
+  resetBtn.style.boxShadow = "inset 0 0 0 2px #2d3436";
+
+  document.querySelector(".main-header").style.backgroundImage =
+    "linear-gradient(to right, #0984e3, #e17055)";
+
+  result.style.backgroundColor = "#535c68";
+  result.style.color = "#f1f2f6";
+}
 
 const reset = () => {
   result.textContent = "?";
