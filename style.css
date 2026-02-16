@@ -140,7 +140,7 @@ h1 {
 }
 
 /* This is the Result Template Box */
-h1 + p {
+.result {
   font-size: 2rem;
   min-width: 10rem;
   border-radius: 3px;
@@ -163,7 +163,7 @@ section {
   max-width: 80rem;
   column-gap: 9.6rem;
   justify-items: center;
-  margin: 5rem auto 3.2rem auto;
+  margin: 4.4rem auto 3.2rem auto;
 }
 
 img {
