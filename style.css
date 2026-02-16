@@ -340,6 +340,7 @@ footer,
 
   .reset {
     width: 35%;
+    margin-top: 0;
   }
 
   .button {
@@ -347,7 +348,7 @@ footer,
   }
 
   .buttons {
-    gap: 1.2rem;
+    gap: 1rem;
     padding: 0 0.6rem;
   }
 
@@ -359,7 +360,7 @@ footer,
 @media (max-width: 26.9em) {
   .grid {
     display: flex;
-    margin-top: 2rem;
+    margin-top: 1.4rem;
     align-items: center;
     padding-top: 0.8rem;
     margin-bottom: 1.8rem;
@@ -395,12 +396,12 @@ footer,
   }
 
   .second-col {
-    margin-top: 1.6rem;
+    margin-top: 1rem;
   }
 
   .first-col,
   .second-col {
-    gap: 1.6rem;
+    gap: 1rem;
   }
 
   .image-container {
