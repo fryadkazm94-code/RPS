@@ -93,7 +93,6 @@ function dark() {
     "linear-gradient(to right, #8e9eab, #eef2f3)";
 
   result.style.backgroundColor = "#334155";
-  result.style.color = "#f1f5f9";
   document.querySelectorAll(".to-top-icon").forEach((element) => {
     element.style.color = "#e0e0e0";
   });
@@ -127,7 +126,6 @@ function light() {
     "linear-gradient(to right, #0984e3, #e17055)";
 
   result.style.backgroundColor = "#535c68";
-  result.style.color = "#f1f2f6";
 }
 
 const reset = () => {
